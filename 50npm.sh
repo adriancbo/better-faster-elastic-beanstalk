@@ -31,12 +31,12 @@ echo "done"
 fi
 
 #install other global stuff
-type -P phantomjs  && echo "... found, skipping install"  || {
-npm install -g --production phantomjs@">=1.9.6 <2.0.0" --user 'root'
-#npm install -g --production casperjs --user 'root'
-}
-type -P r.js  && echo "... found, skipping install"   || npm install -g --production requirejs@">=2.1.11 <3.0.0" --user 'root'
-type -P jade  && echo "... found, skipping install"   || npm install -g --production jade@">=1.3.1 <2.0.0" --user 'root'
+# type -P phantomjs  && echo "... found, skipping install"  || {
+# npm install -g --production phantomjs@">=1.9.6 <2.0.0" --user 'root'
+# #npm install -g --production casperjs --user 'root'
+# }
+
+type -P pm2  && echo "... found, skipping install"   || npm install -g --production pm2@"latest" --user 'root'
 
 #install not-installed yet app node_modules
 if [ ! -d "/var/node_modules" ]; then
